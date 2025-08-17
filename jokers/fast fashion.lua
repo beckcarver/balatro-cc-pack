@@ -8,7 +8,7 @@ SMODS.Joker {
     atlas = 'ModdedVanilla',
     rarity = 2, -- Uncommon
     cost = 5,
-    pos = { x = 0, y = 0 },
+    pos = { x = 0, y = 3 },
 
     loc_txt = {
         name = "Fast Fashion",

@@ -8,7 +8,7 @@ SMODS.Joker {
     atlas = 'ModdedVanilla',
     rarity = 2, -- Uncommon
     cost = 6,
-    pos = { x = 0, y = 0 },
+    pos = { x = 5, y = 3 },
 
     config = { extra = { flush_played = false } },
 
@@ -16,7 +16,7 @@ SMODS.Joker {
         name = "Space Junk",
         text = {
             "If no {C:attention}Flush{} is played this round,",
-            "create a {C:planet}Flush{} planet card"
+            "create a {C:planet}Jupiter{} planet card"
         }
     },
 

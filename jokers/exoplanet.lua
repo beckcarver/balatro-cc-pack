@@ -8,7 +8,7 @@ SMODS.Joker {
     atlas = 'ModdedVanilla',
     rarity = 2, -- Uncommon
     cost = 6,
-    pos = { x = 0, y = 0 },
+    pos = { x = 2, y = 4 },
 
     config = { extra = { xmult = 3, poker_hand = 'High Card' } },
 
@@ -16,7 +16,7 @@ SMODS.Joker {
         name = "Exoplanet",
         text = {
             "Chooses a random {C:attention}poker hand{} each round.",
-            "When that hand is played gives {X:mult,C:white} X#1# {}",
+            "When that hand is played gives {X:mult,C:white}X#1#{} mult",
             "{C:inactive}(Currently: {C:attention}#2#{C:inactive})"
         }
     },

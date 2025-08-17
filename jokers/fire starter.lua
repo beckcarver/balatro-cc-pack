@@ -8,7 +8,7 @@ SMODS.Joker {
     atlas = 'ModdedVanilla',
     rarity = 2, -- Uncommon
     cost = 6,
-    pos = { x = 0, y = 0 },
+    pos = { x = 1, y = 3 },
 
     config = { extra = { chip_gain = 8, chips = 0 } },
 
@@ -16,7 +16,7 @@ SMODS.Joker {
         name = "Fire Starter",
         text = {
             "Gains {C:chips}+#1#{} permanent chips",
-            "whenever a card is {C:red}sold{}",
+            "whenever a card is {C:attention}sold{}",
             "Currently gives {C:chips}+#2#{}"
         }
     },

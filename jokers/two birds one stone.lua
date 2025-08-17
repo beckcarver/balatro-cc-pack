@@ -13,7 +13,7 @@ SMODS.Joker {
         name = "Two Birds One Stone",
         text = {
             "First {C:attention}Pair{} containing a {C:tarot}Stone{} card played per round",
-            "gives {C:mult}2x Mult{} and {C:tarot}1 Tarot card{}"
+            "gives {C:mult}2x Mult{} and {C:tarot}1 Tarot card{}."
         }
     },
     loc_vars = function(self, info_queue, card)
