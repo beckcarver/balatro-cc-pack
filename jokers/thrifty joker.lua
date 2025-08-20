@@ -50,10 +50,7 @@ SMODS.Joker {
                 end
             }))
 
-            return {
-                message = localize('k_bonus_card'),
-                colour = G.C.MONEY
-            }
+            return true
         end
     end
 }

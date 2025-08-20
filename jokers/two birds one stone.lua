@@ -12,7 +12,8 @@ SMODS.Joker {
     loc_txt = {
         name = "Two Birds One Stone",
         text = {
-            "First {C:attention}Pair{} containing a {C:tarot}Stone{} card played per round",
+            "First {C:attention}Pair{} containing a {C:tarot}Stone{}",
+            "card played per round",
             "gives {C:mult}2x Mult{} and {C:tarot}1 Tarot card{}."
         }
     },

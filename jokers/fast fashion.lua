@@ -13,7 +13,7 @@ SMODS.Joker {
     loc_txt = {
         name = "Fast Fashion",
         text = {
-            "{X:mult,C:white}3x{} mult, lose {C:money}3${}",
+            "{X:mult,C:white}3x{} Mult, lose {C:money}5${}",
             "when a hand is played"
         }
     },

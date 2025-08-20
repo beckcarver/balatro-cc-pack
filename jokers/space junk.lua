@@ -6,7 +6,7 @@ SMODS.Joker {
     unlocked = true,
     discovered = true,
     atlas = 'ModdedVanilla',
-    rarity = 2, -- Uncommon
+    rarity = 1, -- Common
     cost = 6,
     pos = { x = 5, y = 3 },
 
@@ -19,6 +19,7 @@ SMODS.Joker {
             "create a {C:planet}Jupiter{} planet card"
         }
     },
+
 
     calculate = function(self, card, context)
         -- Check each hand: did the player play a Flush?

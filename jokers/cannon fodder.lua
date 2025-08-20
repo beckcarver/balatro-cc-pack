@@ -3,7 +3,7 @@ SMODS.Joker {
     loc_txt = {
         name = "Cannon Fodder",
         text = {
-            "{C:attention}Retrigger{} all {C:attention}Glass Cards{}",
+            "Retrigger all {C:attention}Glass Cards{}",
         }
     },
     enhancement_gate = 'm_glass',
