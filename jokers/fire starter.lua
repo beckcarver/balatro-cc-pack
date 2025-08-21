@@ -10,7 +10,7 @@ SMODS.Joker {
     cost = 6,
     pos = { x = 1, y = 3 },
 
-    config = { extra = { chip_gain = 8, chips = 0 } },
+    config = { extra = { chip_gain = 7, chips = 0 } },
 
     loc_txt = {
         name = "Fire Starter",

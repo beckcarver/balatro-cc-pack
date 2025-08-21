@@ -8,13 +8,14 @@ SMODS.Joker {
     atlas = 'ModdedVanilla',
     rarity = 2, -- Uncommon
     cost = 6,
-    pos = { x = 4, y = 5 },
+    pos = { x = 5, y = 4 },
     config = { extra = { base_mult = 1, increment = 0.1, dollars_per_increment = 5 } },
 
     loc_txt = {
         name = "Bubble",
         text = {
             "Gains {X:mult,C:white}0.1x{} for every {C:money}$5{}", -- manually update vals here!!
+            "Bubbles pop!",
             "{C:inactive}(Currently: {X:mult,C:white}#3#x{C:inactive})"
         }
     },

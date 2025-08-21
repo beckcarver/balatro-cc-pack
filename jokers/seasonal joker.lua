@@ -1,0 +1,60 @@
+SMODS.Joker {
+    key = 'seasonal_joker',
+    blueprint_compat = true,
+    eternal_compat = true,
+    unlocked = true,
+    discovered = true,
+    rarity = 2, -- Uncommon
+    cost = 7,
+    atlas = 'ModdedVanilla',
+    pos = { x = 1, y = 5 },
+
+    config = { extra = { triggered_this_round = false } },
+
+    loc_txt = {
+        name = "Seasonal Joker",
+        text = {
+            "Cycles through Foil, Holo,",
+            "Polychrome, and Negative",
+            "editions respectively",
+        }
+    },
+    
+    add_to_deck = function(self, card, from_debuff)
+        -- Ensure card.edition exists first
+        card.edition = card.edition or {}
+        -- Only give Foil if no edition is currently set
+        if not (card.edition.foil or card.edition.holo or card.edition.polychrome or card.edition.negative) then
+            card:set_edition({ foil = true, holo = false, polychrome = false, negative = false })
+        end
+    end,
+    
+
+    calculate = function(self, card, context)
+        if context.end_of_round and not context.blueprint then
+            if card.ability.extra.triggered_this_round then
+                return
+            end
+            card.ability.extra.triggered_this_round = true
+
+            -- Cycle through editions using if-elseif-else
+            if card.edition.foil then
+                card:set_edition({ foil = false, holo = true, polychrome = false, negative = false })
+            elseif card.edition.holo then
+                card:set_edition({ foil = false, holo = false, polychrome = true, negative = false })
+            elseif card.edition.polychrome then
+                card:set_edition({ foil = false, holo = false, polychrome = false, negative = true })
+            elseif card.edition.negative then
+                card:set_edition({ foil = true, holo = false, polychrome = false, negative = false })
+            else
+                card:set_edition({ foil = true, holo = false, polychrome = false, negative = false })
+            end
+
+            card:juice_up(0.3, 0.5)
+        end
+
+        if context.setting_blind then
+            card.ability.extra.triggered_this_round = false
+        end
+    end
+}
