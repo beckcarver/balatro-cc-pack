@@ -16,7 +16,7 @@ SMODS.Joker {
             "Adds {C:attention}1{} to the numerator",
             "and denominator of",
             "{C:attention}listed{} {C:green}probabilities{}",
-            "{C:inactive}(ex: {C:green}1 in 2{} -> {C:green}2 in 3{}){}",
+            "{C:inactive}(ex:{} {C:green}1 in 2{} {C:inactive}->{} {C:green}2 in 3{}{C:inactive}){}", --fuckass inactive
         }
     },
 

@@ -3,7 +3,8 @@ SMODS.Joker {
     loc_txt = {
         name = "Embu",
         text = {
-            "Played cards give {C:mult}+#1#{} Mult for {C:attention}#2#{} hands",
+            "Played cards give {C:mult}+#1#{}",
+            "Mult for {C:attention}#2#{} hands",
         }
     },
     unlocked = true,
