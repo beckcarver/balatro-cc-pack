@@ -20,8 +20,9 @@ SMODS.Joker {
     loc_txt = {
         name = "Thrifty Joker",
         text = {
-            "Whenever hand is a {C:attention}High Card{}",
-            "card gains a random enhancement"
+            "Whenever hand is a", 
+            "{C:attention}High Card{}, first card",
+            "gains a random {C:chips}enhancement{}"
         }
     },
 

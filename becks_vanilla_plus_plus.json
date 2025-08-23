@@ -2,12 +2,12 @@
     "id": "VPPMODS",
     "name": "Vanilla++",
     "author": ["beckcarver"],
-    "description": "Vanilla-like content mod, credit to Rofflatro and Extra Credit.",
+    "description": "Vanilla-like content mod, credit to Rofflatro and Extra Credit for inspiration & code",
     "prefix": "mvan",
-    "main_file": "ModdedVanilla.lua",
+    "main_file": "vanilla_plus_plus.lua",
     "badge_colour": "02A8BF",
     "dependencies": [
         "Steamodded (>=1.0.0~ALPHA-1225a)"
     ],
-    "version": "0.1.0"
+    "version": "0.0.1"
 }
