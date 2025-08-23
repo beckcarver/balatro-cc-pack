@@ -13,7 +13,7 @@ SMODS.Joker {
     eternal_compat = false,
     -- Only appears if Ducasse is extinct (adjust flag name as needed to match your mod's pool_flag style)
     yes_pool_flag = 'vpp_ducasse_extinct',
-    config = { extra = { mult = 10, hands_left = 50 } },
+    config = { extra = { mult = 8, hands_left = 50 } },
     rarity = 1, -- Common
     atlas = 'ModdedVanilla',
     pos = { x = 2, y = 2 },

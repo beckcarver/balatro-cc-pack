@@ -12,24 +12,22 @@ SMODS.Joker {
     cost = 7,
     pos = { x = 2, y = 5 },
 
-    config = { extra = { chips = 100, mult = 20, xmult = 2, hand_count = 0 } },
+    config = { extra = { mult = 12, xmult = 2, hand_count = 0 } },
 
     loc_txt = {
         name = "Omar v1",
         text = {
-            "1st hand played gives {C:chips}+#1#{} chips",
-            "2nd hand played gives {C:mult}+#2#{} mult",
-            "3rd hand played gives {X:mult,C:white}x#3#{} multiplier",
-            "{C:inactive}Currently on hand: {C:attention}#4#{}",
+            "1st hand played gives {C:mult}+#1#{} mult",
+            "2nd hand played gives {X:mult,C:white}x#2#{} multiplier",
+            "{C:inactive}Currently on hand: {C:attention}#3#{}",
             "{C:dark_edition}stinkyinvegas.com{}"
         }
     },
 
     loc_vars = function(self, info_queue, card)
-        local hand_stage = (card.ability.extra.hand_count % 3) + 1
+        local hand_stage = (card.ability.extra.hand_count % 2) + 1
         return {
             vars = {
-                card.ability.extra.chips,
                 card.ability.extra.mult,
                 card.ability.extra.xmult,
                 hand_stage
@@ -45,18 +43,11 @@ SMODS.Joker {
             if card.ability.extra.hand_count == 1 then
                 juice_card_until(card, function() return false end, true)
                 return {
-                    message = "Chips!",
-                    chips = card.ability.extra.chips
-                }
-
-            elseif card.ability.extra.hand_count == 2 then
-                juice_card_until(card, function() return false end, true)
-                return {
                     message = "Mult!",
                     mult = card.ability.extra.mult
                 }
 
-            elseif card.ability.extra.hand_count == 3 then
+            elseif card.ability.extra.hand_count == 2 then
                 card.ability.extra.hand_count = 0
                 juice_card_until(card, function() return false end, true)
                 return {
