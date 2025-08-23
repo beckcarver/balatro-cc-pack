@@ -1,62 +1,49 @@
--- -- Coven Flush
--- SMODS.Joker {
---     key = "coven_flush",
---     blueprint_compat = true,
---     eternal_compat = true,
---     unlocked = true,
---     discovered = true,
---     rarity = 3, -- Rare
---     cost = 8,
---     atlas = 'ModdedVanilla',
---     pos = { x = 3, y = 5 },
+-- Coven
+SMODS.Joker {
+    key = "coven",
+    blueprint_compat = false,
+    eternal_compat = true,
+    unlocked = true,
+    discovered = true,
+    rarity = 2, -- Uncommon
+    cost = 8,
+    atlas = 'ModdedVanilla',
+    pos = { x = 4, y = 5 },
 
---     config = { extra = { poker_hand = 'Flush House', applied = false } },
+    config = { extra = { poker_hand = 'Flush House', applied = false } },
 
---     loc_txt = {
---         name = "Coven Flush",
---         text = {
---             "When a {C:attention}Flush House{} is scored",
---             "apply a random edition to",
---             "the first card scored"
---         }
---     },
+    loc_txt = {
+        name = "Coven",
+        text = {
+            "First {C:attention}Flush House{} played",
+            "each round applies a",
+            "random {C:dark_edition}edition{} to the",
+            "the last card scored"
+        }
+    },
 
---     loc_vars = function(self, info_queue, card)
---         return { vars = { localize(card.ability.extra.poker_hand, 'poker_hands') } }
---     end,
+    loc_vars = function(self, info_queue, card)
+        return { vars = { localize(card.ability.extra.poker_hand, 'poker_hands') } }
+    end,
 
---     calculate = function(self, card, context)
---         if context.joker_main and not card.ability.extra.applied then
---             local hand_cards = context.poker_hands[card.ability.extra.poker_hand] or {}
---             if #hand_cards > 0 then
---                 local first_card = hand_cards[1]
---                 if first_card then
---                     first_card.edition = first_card.edition or {}
---                     if not (first_card.edition.foil or first_card.edition.holo or first_card.edition.polychrome or first_card.edition.negative) then
-                        
---                         -- Weighted random selection
---                         local roll = math.random()
---                         local edition_key
---                         if roll <= 0.50 then
---                             edition_key = "foil"
---                         elseif roll <= 0.85 then -- 0.50 + 0.35
---                             edition_key = "holo"
---                         else
---                             edition_key = "polychrome"
---                         end
+    calculate = function(self, card, context)
+        
+        if not card.ability.extra.applied and context.individual and context.cardarea == G.play and not context.blueprint and context.scoring_name == "Flush House" then
+            local last_card = context.scoring_hand[5]
+            if last_card and not last_card.edition then 
+                card:juice_up(0.3, 0.5)
+                local edition = poll_edition('swag money', nil, true, true)
+                if edition then
+                    last_card:set_edition(edition, true)
+                    card.ability.extra.applied = true
+                end
+            end
+        end
+    end,
 
---                         first_card:set_edition({ [edition_key] = true })
---                         card.ability.extra.applied = true
---                         first_card:juice_up(0.3, 0.5)
---                     end
---                 end
---             end
---         end
---     end,
-
---     calculate_joker_reset = function(self, card, context)
---         if context.start_of_round then
---             card.ability.extra.applied = false
---         end
---     end
--- }
+    calculate_joker_reset = function(self, card, context)
+        if context.start_of_round then
+            card.ability.extra.applied = false
+        end
+    end
+}

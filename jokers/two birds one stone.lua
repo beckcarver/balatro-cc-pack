@@ -22,12 +22,12 @@ SMODS.Joker {
     end,
     calculate = function(self, card, context)
         -- Reset trigger at start of round
-        if context.first_hand_of_round then
+        if context.end_of_round and context.individual then
             card.ability.extra.pair_triggered = false
         end
 
         -- Only trigger once per round and only on main eval
-        if context.joker_main and (next(context.poker_hands['Pair'])) then
+        if context.joker_main and (next(context.poker_hands['Pair'])) and not card.ability.extra.pair_triggered then
             -- Find all Pairs in this hand
             local found_stone = false
             if context.full_hand then

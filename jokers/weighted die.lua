@@ -1,0 +1,31 @@
+-- Weighted Die
+SMODS.Joker {
+    key = "weighted_die",
+    blueprint_compat = false,
+    eternal_compat = true,
+    unlocked = true,
+    discovered = true,
+    atlas = 'ModdedVanilla',
+    rarity = 1, -- Common
+    cost = 3,
+    pos = { x = 3, y = 5 },
+
+    loc_txt = {
+        name = "Weighted Die",
+        text = {
+            "Adds {C:attention}1{} to the numerator",
+            "and denominator of",
+            "{C:attention}listed{} {C:green}probabilities{}",
+            "{C:inactive}(ex: {C:green}1 in 2{} -> {C:green}2 in 3{}){}",
+        }
+    },
+
+    calculate = function(self, card, context)
+        if context.mod_probability and not context.blueprint then
+            return {
+                numerator = context.numerator + 1,
+                denominator = context.denominator + 1
+            }
+        end
+    end
+}
