@@ -17,7 +17,7 @@ SMODS.Joker {
             "{C:green}#1#/#2#{} chance at end of",
             "round to turn a random",
             "Joker {C:dark_edition}Polychrome{}",
-            "{C:dark_edition}stinkyinvegas.com{}"
+            "{C:inactive}stinkyinvegas.com{}"
         }
     },
 
