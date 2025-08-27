@@ -3,7 +3,7 @@ SMODS.Joker{
     key = "bvpp_venture_capital",
     config = {
         extra = {
-            payout = 30,
+            payout = 12,
             penalty = 1,
             odds = 5  -- 1 in 5 chance
         }
@@ -11,7 +11,7 @@ SMODS.Joker{
     loc_txt = {
         ['name'] = 'Venture Capital',
         ['text'] = {
-            [1] = '{C:attention}1/5{} chance to give {C:money}$#1#{} at end of round,',
+            [1] = '{C:attention}1/2{} chance to give {C:money}$#1#{} at end of round,',
             [2] = 'otherwise lose {C:money}$#2#{}'
         }
     },

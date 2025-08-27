@@ -15,7 +15,7 @@ SMODS.Joker {
         name = "Bubble",
         text = {
             "Gains {X:mult,C:white}0.1x{} for every {C:money}$5{}", -- manually update vals here!!
-            "Bubbles pop!",
+            "Chance to pop also increases",
             "{C:inactive}(Currently: {X:mult,C:white}#3#x{C:inactive})"
         }
     },

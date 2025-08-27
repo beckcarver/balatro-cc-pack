@@ -21,7 +21,7 @@ SMODS.Joker {
         name = "Thrifty Joker",
         text = {
             "Whenever hand is a", 
-            "{C:attention}High Card{}, first card",
+            "{C:attention}High Card{}, scored card",
             "gains a random {C:chips}enhancement{}"
         }
     },

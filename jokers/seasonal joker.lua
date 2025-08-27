@@ -14,10 +14,10 @@ SMODS.Joker {
     loc_txt = {
         name = "Seasonal Joker",
         text = {
-            "Joker changes edition at",
+            "Joker changes {C:attention}edition{} at",
             "the end of each round.",
-            "Cycles through Foil, Holo,",
-            "Polychrome, and Negative",
+            "Cycles through {C:chips}Foil{}, {C:mult}Holo{},",
+            "{X:mult,C:white}Polychrome{}, and {C:dark_edition}Negative{}",
             "editions respectively",
         }
     },

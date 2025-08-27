@@ -3,8 +3,9 @@ SMODS.Joker {
     loc_txt = {
         name = "Yay! All 7s",
         text = {
-            "{C:green}#1#/#2#{} chance to retrigger played",
-            "{C:attention}7's{} (max 2 retriggers)"
+            "{C:green}#1#/#2#{} chance to retrigger",
+            "played {C:attention}7's{}", 
+            "C{inactive}(max 2 retriggers){}"
         }
     },
     blueprint_compat = true,

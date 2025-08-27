@@ -16,7 +16,7 @@ SMODS.Joker {
         name = "Exoplanet",
         text = {
             "Chooses a random {C:attention}poker hand{} each round.",
-            "When that hand is played gives {X:mult,C:white}X#1#{} mult",
+            "When that hand is played gives {X:mult,C:white}X#1#{} Mult",
             "{C:inactive}(Currently: {C:attention}#2#{C:inactive})"
         }
     },

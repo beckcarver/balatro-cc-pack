@@ -13,9 +13,10 @@ SMODS.Joker {
     loc_txt = {
         name = "Two Birds One Stone",
         text = {
-            "First {C:attention}Pair{} containing a {C:tarot}Stone{}",
-            "card played per round",
-            "gives {C:mult}2x Mult{} and {C:tarot}1 Tarot card{}."
+            "Gives {X:mult,C:white}2x{} Mult and 1 {C:tarot}Tarot{}",
+            "card when played hand",
+            "is a {C:attention} Two Pair{} and",
+            "contains a {C:attention}Stone Card{}",
         }
     },
     loc_vars = function(self, info_queue, card)
@@ -28,7 +29,7 @@ SMODS.Joker {
         end
 
         -- Only trigger once per round and only on main eval
-        if context.joker_main and (next(context.poker_hands['Pair'])) and not card.ability.extra.pair_triggered then
+        if context.joker_main and (next(context.poker_hands['Two Pair'])) and not card.ability.extra.pair_triggered then
             -- Find all Pairs in this hand
             local found_stone = false
             if context.full_hand then
