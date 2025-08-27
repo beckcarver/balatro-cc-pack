@@ -1,6 +1,6 @@
 -- Boxing Joker
 SMODS.Joker {
-    key = "boxing_joker",
+    key = "bvpp_boxing_joker",
     blueprint_compat = true,
     eternal_compat = true,
     unlocked = true,
@@ -18,6 +18,7 @@ SMODS.Joker {
             "1st hand played gives {C:chips}+#1#{} chips",
             "2nd hand played gives {C:chips}+#2#{} chips",
             "3rd hand played gives {C:chips}+#3#{} chips",
+            "then resets to first hand",
             "{C:inactive}Currently on hand: {C:attention}#4#{}"
         }
     },

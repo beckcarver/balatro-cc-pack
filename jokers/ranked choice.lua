@@ -1,6 +1,6 @@
 -- Ranked Choice
 SMODS.Joker {
-    key = "ranked_choice",
+    key = "bvpp_ranked_choice",
     blueprint_compat = true,
     eternal_compat = true,
     unlocked = true,

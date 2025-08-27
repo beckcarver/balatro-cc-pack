@@ -1,13 +1,13 @@
 -- Fax Machine
 SMODS.Joker {
-    key = "fax_machine",
+    key = "bvpp_fax_machine",
     blueprint_compat = true,
     perishable_compat = false,
     unlocked = true,
     discovered = true,
     rarity = 3, -- Rare
     cost = 6,
-    pos = { x = 4, y = 4 },
+    pos = { x = 3, y = 4 },
     config = { extra = { destroyed_this_round = false } },
     atlas = 'ModdedVanilla',
 

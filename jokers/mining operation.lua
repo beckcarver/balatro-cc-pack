@@ -1,6 +1,6 @@
 -- Mining Operation
 SMODS.Joker {
-    key = "mining_operation",
+    key = "bvpp_mining_operation",
     blueprint_compat = true,
     rarity = 2, -- uncommon
     cost = 6,

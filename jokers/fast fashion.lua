@@ -1,6 +1,6 @@
 -- Fast Fashion
 SMODS.Joker {
-    key = "fast_fashion",
+    key = "bvpp_fast_fashion",
     blueprint_compat = true,
     eternal_compat = true,
     unlocked = true,

@@ -1,6 +1,6 @@
 -- Curtain Call
 SMODS.Joker {
-    key = "curtain_call",
+    key = "bvpp_curtain_call",
     blueprint_compat = false,
     eternal_compat = true,
     unlocked = true,

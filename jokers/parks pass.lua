@@ -1,12 +1,12 @@
 -- Public Land / Parks Pass
 SMODS.Joker {
-    key = "parks_pass",
+    key = "bvpp_parks_pass",
     blueprint_compat = true,
     eternal_compat = true,
     unlocked = true,
     discovered = true,
     atlas = 'ModdedVanilla',
-    rarity = 1, -- Common
+    rarity = 2, -- Uncommon
     cost = 5,
     pos = { x = 4, y = 1 },
 

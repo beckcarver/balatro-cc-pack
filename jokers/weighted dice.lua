@@ -1,6 +1,6 @@
 -- Weighted Die
 SMODS.Joker {
-    key = "weighted_dice",
+    key = "bvpp_weighted_dice",
     blueprint_compat = false,
     eternal_compat = true,
     unlocked = true,

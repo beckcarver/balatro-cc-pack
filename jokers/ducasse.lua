@@ -1,5 +1,5 @@
 SMODS.Joker {
-    key = 'ducasse',
+    key = 'bvpp_ducasse',
     loc_txt = {
         name = "Ducasse",
         text = {

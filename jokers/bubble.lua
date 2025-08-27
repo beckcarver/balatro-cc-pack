@@ -1,6 +1,6 @@
 -- Bubble
 SMODS.Joker {
-    key = "bubble",
+    key = "bvpp_bubble",
     blueprint_compat = true,
     eternal_compat = true,
     unlocked = true,

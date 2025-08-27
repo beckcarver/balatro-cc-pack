@@ -1,12 +1,12 @@
 -- Thrifty Joker
 SMODS.Joker {
-    key = "thrifty_joker",
+    key = "bvpp_thrifty_joker",
     blueprint_compat = true,
     eternal_compat = true,
     unlocked = true,
     discovered = true,
     atlas = 'ModdedVanilla',
-    pos = { x = 0, y = 4 },
+    pos = { x = 4, y = 0 },
     rarity = 1, -- Common
     cost = 4,
 

@@ -1,6 +1,6 @@
 SMODS.Joker{
     name = "Scratch Card",
-    key = "scratch_card",
+    key = "bvpp_scratch_card",
     config = {
         extra = {
             min_gain = 5,
@@ -8,10 +8,11 @@ SMODS.Joker{
         }
     },
     loc_txt = {
-        ['name'] = 'Scratch Card',
-        ['text'] = {
-            [1] = 'Destroys itself at the end of a shop.',
-            [2] = 'Gives between {C:money}$#1#{} and {C:money}$#2#{}.'
+        name = "Scratch Card",
+        text = {
+            "At end of {C:attention}shop{} destroy",
+            "this joker and gain",
+            "between {C:money}$#1#{} and {C:money}$#2#{}",
         }
     },
     pos = { x = 1, y = 5 },

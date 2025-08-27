@@ -1,6 +1,6 @@
 SMODS.Joker{
     name = "Venture Capital",
-    key = "venture_capital",
+    key = "bvpp_venture_capital",
     config = {
         extra = {
             payout = 30,

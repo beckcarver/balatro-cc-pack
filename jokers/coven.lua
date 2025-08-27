@@ -1,6 +1,6 @@
 -- Coven
 SMODS.Joker {
-    key = "coven",
+    key = "bvpp_coven",
     blueprint_compat = false,
     eternal_compat = true,
     unlocked = true,
@@ -18,7 +18,7 @@ SMODS.Joker {
             "First {C:attention}Flush House{} played",
             "each round applies a",
             "random {C:dark_edition}edition{} to the",
-            "the last card scored"
+            "the last card in the hand"
         }
     },
 

@@ -1,5 +1,5 @@
 SMODS.Joker {
-    key = 'seasonal_joker',
+    key = 'bvpp_seasonal_joker',
     blueprint_compat = true,
     eternal_compat = true,
     unlocked = true,
@@ -14,6 +14,8 @@ SMODS.Joker {
     loc_txt = {
         name = "Seasonal Joker",
         text = {
+            "Joker changes edition at",
+            "the end of each round.",
             "Cycles through Foil, Holo,",
             "Polychrome, and Negative",
             "editions respectively",

@@ -2,7 +2,7 @@
 -- if we find a better gameplay loop for omar this joker could be renamed to something related to movement/repositioning
 -- maybe knight?
 SMODS.Joker {
-    key = "omar_v1",
+    key = "bvpp_knight",
     blueprint_compat = true,
     eternal_compat = true,
     unlocked = true,
@@ -10,17 +10,17 @@ SMODS.Joker {
     atlas = 'ModdedVanilla',
     rarity = 2, -- Uncommon
     cost = 7,
-    pos = { x = 3, y = 4 },
+    pos = { x = 0, y = 0 },
 
     config = { extra = { mult = 12, xmult = 2, hand_count = 0 } },
 
     loc_txt = {
-        name = "Omar v1",
+        name = "Knight",
         text = {
             "1st hand played gives {C:mult}+#1#{} mult",
             "2nd hand played gives {X:mult,C:white}x#2#{} multiplier",
-            "{C:inactive}Currently on hand: {C:attention}#3#{}",
-            "{C:dark_edition}stinkyinvegas.com{}"
+            "then resets to first hand",
+            "{C:inactive}Currently on hand: {C:attention}#3#{}"
         }
     },
 

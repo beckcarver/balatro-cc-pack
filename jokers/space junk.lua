@@ -1,6 +1,6 @@
 -- Toilet
 SMODS.Joker {
-    key = "space_junk",
+    key = "bvpp_space_junk",
     blueprint_compat = false,
     eternal_compat = true,
     unlocked = true,
