@@ -5,10 +5,10 @@ SMODS.Joker {
     eternal_compat = true,
     unlocked = true,
     discovered = true,
-    config = { extra = { odds = 8, _woker_triggered = false } },
+    config = { extra = { odds = 7, _woker_triggered = false } },
     rarity = 3, -- Rare
     atlas = 'ModdedVanilla',
-    pos = { x = 0, y = 5 },
+    pos = { x = 1, y = 4 },
     cost = 7,
 
     loc_txt = {

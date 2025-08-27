@@ -14,7 +14,7 @@ SMODS.Joker {
     config = { extra = { odds = 4 } },
     rarity = 2,
     atlas = 'ModdedVanilla',
-    pos = { x = 5, y = 1 },
+    pos = { x = 4, y = 4 }, -- need art
     cost = 8,
 
     loc_vars = function(self, info_queue, card)

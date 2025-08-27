@@ -8,7 +8,7 @@ SMODS.Joker {
     rarity = 2, -- Uncommon
     cost = 8,
     atlas = 'ModdedVanilla',
-    pos = { x = 4, y = 5 },
+    pos = { x = 2, y = 1 },
 
     config = { extra = { poker_hand = 'Flush House', applied = false } },
 

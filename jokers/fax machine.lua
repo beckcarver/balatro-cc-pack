@@ -7,7 +7,7 @@ SMODS.Joker {
     discovered = true,
     rarity = 3, -- Rare
     cost = 6,
-    pos = { x = 5, y = 5 },
+    pos = { x = 4, y = 4 },
     config = { extra = { destroyed_this_round = false } },
     atlas = 'ModdedVanilla',
 

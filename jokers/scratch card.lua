@@ -3,8 +3,8 @@ SMODS.Joker{
     key = "scratch_card",
     config = {
         extra = {
-            min_gain = 0,
-            max_gain = 10
+            min_gain = 5,
+            max_gain = 15
         }
     },
     loc_txt = {
@@ -14,8 +14,7 @@ SMODS.Joker{
             [2] = 'Gives between {C:money}$#1#{} and {C:money}$#2#{}.'
         }
     },
-    pos = { x = 3, y = 2 },
-    cost = 0,
+    pos = { x = 1, y = 5 },
     rarity = 1,
     blueprint_compat = false,
     eternal_compat = false,

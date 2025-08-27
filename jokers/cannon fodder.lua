@@ -14,7 +14,7 @@ SMODS.Joker {
     unlocked = true,
     discovered = true,
     atlas = 'ModdedVanilla',
-    pos = { x = 4, y = 2 },
+    pos = { x = 1, y = 1 }, -- 0,1 for alt art
 
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue+1] = G.P_CENTERS.m_glass 

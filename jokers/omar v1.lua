@@ -10,7 +10,7 @@ SMODS.Joker {
     atlas = 'ModdedVanilla',
     rarity = 2, -- Uncommon
     cost = 7,
-    pos = { x = 2, y = 5 },
+    pos = { x = 3, y = 4 },
 
     config = { extra = { mult = 12, xmult = 2, hand_count = 0 } },
 
@@ -43,7 +43,6 @@ SMODS.Joker {
             if card.ability.extra.hand_count == 1 then
                 juice_card_until(card, function() return false end, true)
                 return {
-                    message = "Mult!",
                     mult = card.ability.extra.mult
                 }
 
@@ -51,7 +50,6 @@ SMODS.Joker {
                 card.ability.extra.hand_count = 0
                 juice_card_until(card, function() return false end, true)
                 return {
-                    message = "Double!",
                     xmult = card.ability.extra.xmult
                 }
             end

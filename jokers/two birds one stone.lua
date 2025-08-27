@@ -4,7 +4,7 @@ SMODS.Joker {
     eternal_compat = true,
     rarity = 2, -- Uncommon
     cost = 5,
-    pos = { x = 5, y = 2 },
+    pos = { x = 3, y = 2 },
     unlocked = true,
     discovered = true,
     atlas = 'ModdedVanilla',

@@ -8,14 +8,15 @@ SMODS.Joker {
     atlas = 'ModdedVanilla',
     rarity = 1, -- Common
     cost = 5,
-    pos = { x = 3, y = 3 },
+    pos = { x = 4, y = 1 },
 
     config = { extra = { mult_per_unused = 1, total_mult = 0 } },
 
     loc_txt = {
         name = "Parks Pass",
         text = {
-            "Gain {C:mult}+1{} for every unused discard",
+            "Gain {C:mult}+1{} for every",
+            "unused discard this run",
             "current total: {C:mult}#2#{} mult"
         }
     },

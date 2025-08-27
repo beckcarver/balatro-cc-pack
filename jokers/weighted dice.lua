@@ -1,6 +1,6 @@
 -- Weighted Die
 SMODS.Joker {
-    key = "weighted_die",
+    key = "weighted_dice",
     blueprint_compat = false,
     eternal_compat = true,
     unlocked = true,
@@ -8,10 +8,10 @@ SMODS.Joker {
     atlas = 'ModdedVanilla',
     rarity = 1, -- Common
     cost = 3,
-    pos = { x = 3, y = 5 },
+    pos = { x = 3, y = 1 },
 
     loc_txt = {
-        name = "Weighted Die",
+        name = "Weighted Dice",
         text = {
             "Adds {C:attention}1{} to the numerator",
             "and denominator of",
