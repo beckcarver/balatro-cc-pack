@@ -11,7 +11,7 @@ SMODS.Joker{
     loc_txt = {
         ['name'] = 'Venture Capital',
         ['text'] = {
-            [1] = '{C:attention}1/2{} chance to give {C:money}$#1#{} at end of round,',
+            [1] = '{C:green}1/2{} chance to give {C:money}$#1#{} at end of round,',
             [2] = 'otherwise lose {C:money}$#2#{}'
         }
     },

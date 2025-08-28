@@ -41,7 +41,7 @@ SMODS.Joker {
                 end
             end
             if found_stone then
-                card.ability.extra.pair_triggered = true
+                card.ability.extra.pair_triggered = false -- Make this true to trigger only once per round
                 return {
                     xmult = 2,
                     extra = {

@@ -1,6 +1,6 @@
 -- Fire Starter
 SMODS.Joker {
-    key = "bvpp_fire_starter",
+    key = "bvpp_lighter",
     blueprint_compat = true,
     eternal_compat = true,
     unlocked = true,
@@ -13,7 +13,7 @@ SMODS.Joker {
     config = { extra = { chip_gain = 7, chips = 0 } },
 
     loc_txt = {
-        name = "Fire Starter",
+        name = "Lighter",
         text = {
             "Gains {C:chips}+#1#{} permanent chips",
             "whenever a card is {C:attention}sold{}",
