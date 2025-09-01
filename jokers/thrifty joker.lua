@@ -1,6 +1,6 @@
 -- Thrifty Joker
 SMODS.Joker {
-    key = "bvpp_thrifty_joker",
+    key = "bccp_thrifty_joker",
     blueprint_compat = true,
     eternal_compat = true,
     unlocked = true,

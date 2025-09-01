@@ -1,6 +1,6 @@
 -- Coven
 SMODS.Joker {
-    key = "bvpp_coven",
+    key = "bccp_coven",
     blueprint_compat = false,
     eternal_compat = true,
     unlocked = true,

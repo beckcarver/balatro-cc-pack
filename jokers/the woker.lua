@@ -1,6 +1,6 @@
 -- The Woker
 SMODS.Joker {
-    key = 'bvpp_the_woker',
+    key = 'bccp_the_woker',
     blueprint_compat = true,
     eternal_compat = true,
     unlocked = true,

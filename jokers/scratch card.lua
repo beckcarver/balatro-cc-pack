@@ -1,6 +1,6 @@
 SMODS.Joker{
     name = "Scratch Card",
-    key = "bvpp_scratch_card",
+    key = "bccp_scratch_card",
     config = {
         extra = {
             min_gain = 5,

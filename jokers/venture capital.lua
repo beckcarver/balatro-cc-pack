@@ -1,5 +1,5 @@
 SMODS.Joker {
-    key = 'bvpp_venture_capital',
+    key = 'bccp_venture_capital',
     loc_txt = {
         name = "Venture Capital",
         text = {
@@ -26,7 +26,7 @@ SMODS.Joker {
 
     loc_vars = function(self, info_queue, card)
         -- get scaled odds (respects Oops! All 6s and similar)
-        local n, d = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'bvpp_venture_capital')
+        local n, d = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'bccp_venture_capital')
 
         -- keep them stored so calc_dollar_bonus stays in sync
         card.ability.extra._numerator = n
@@ -41,7 +41,7 @@ SMODS.Joker {
         local n = card.ability.extra._numerator or 1
         local d = card.ability.extra._denominator or card.ability.extra.odds
 
-        if SMODS.pseudorandom_probability(card, 'bvpp_venture_capital', n, d) then
+        if SMODS.pseudorandom_probability(card, 'bccp_venture_capital', n, d) then
             return card.ability.extra.payout
         else
             return -card.ability.extra.penalty

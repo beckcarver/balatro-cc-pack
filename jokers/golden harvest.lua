@@ -1,5 +1,5 @@
 SMODS.Joker {
-    key = 'bvpp_golden_harvest',
+    key = 'bccp_golden_harvest',
     loc_txt = {
         name = "Golden Harvest",
         text = {

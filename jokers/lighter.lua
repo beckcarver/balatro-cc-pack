@@ -1,6 +1,6 @@
 -- Fire Starter
 SMODS.Joker {
-    key = "bvpp_lighter",
+    key = "bccp_lighter",
     blueprint_compat = true,
     eternal_compat = true,
     unlocked = true,

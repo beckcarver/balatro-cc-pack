@@ -1,5 +1,5 @@
 SMODS.Joker {
-    key = 'bvpp_seasonal_joker',
+    key = 'bccp_seasonal_joker',
     blueprint_compat = true,
     eternal_compat = true,
     unlocked = true,

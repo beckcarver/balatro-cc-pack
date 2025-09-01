@@ -2,7 +2,7 @@
 -- if we find a better gameplay loop for omar this joker could be renamed to something related to movement/repositioning
 -- maybe knight?
 SMODS.Joker {
-    key = "bvpp_knight",
+    key = "bccp_knight",
     blueprint_compat = true,
     eternal_compat = true,
     unlocked = true,

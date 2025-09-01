@@ -1,6 +1,6 @@
 -- Public Land / Parks Pass
 SMODS.Joker {
-    key = "bvpp_parks_pass",
+    key = "bccp_parks_pass",
     blueprint_compat = true,
     eternal_compat = true,
     unlocked = true,

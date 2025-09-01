@@ -1,5 +1,5 @@
 SMODS.Joker {
-    key = 'bvpp_yay_all_7s',
+    key = 'bccp_yay_all_7s',
     loc_txt = {
         name = "Yay! All 7s",
         text = {

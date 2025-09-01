@@ -1,6 +1,6 @@
 -- Exoplanet
 SMODS.Joker {
-    key = "bvpp_exoplanet",
+    key = "bccp_exoplanet",
     blueprint_compat = true,
     eternal_compat = true,
     unlocked = true,

@@ -1,6 +1,6 @@
 -- Two Birds One Stone
 SMODS.Joker {
-    key = "bvpp_two_birds_one_stone",
+    key = "bccp_two_birds_one_stone",
     blueprint_compat = true,
     eternal_compat = true,
     rarity = 2, -- Uncommon

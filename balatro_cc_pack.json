@@ -1,0 +1,13 @@
+{
+    "id": "BalatroCCPack",
+    "name": "Balatro Community College",
+    "author": ["BKM"],
+    "description": "Vanilla-like joker pack, credit to Rofflatro and Extra Credit for inspiration & code reference. Follow me @BalatroCC on YouTube!",
+    "prefix": "bccp",
+    "main_file": "balatro_cc_pack.lua",
+    "badge_colour": "02A8BF",
+    "dependencies": [
+        "Steamodded (>=1.0.0~ALPHA-1225a)"
+    ],
+    "version": "0.1.0"
+}

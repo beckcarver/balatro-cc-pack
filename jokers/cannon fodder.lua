@@ -1,5 +1,5 @@
 SMODS.Joker {
-    key = 'bvpp_cannon_fodder',
+    key = 'bccp_cannon_fodder',
     loc_txt = {
         name = "Cannon Fodder",
         text = {

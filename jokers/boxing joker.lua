@@ -1,6 +1,6 @@
 -- Boxing Joker
 SMODS.Joker {
-    key = "bvpp_boxing_joker",
+    key = "bccp_boxing_joker",
     blueprint_compat = true,
     eternal_compat = true,
     unlocked = true,

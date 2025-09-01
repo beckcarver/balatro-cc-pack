@@ -1,6 +1,6 @@
 -- Fax Machine
 SMODS.Joker {
-    key = "bvpp_fax_machine",
+    key = "bccp_fax_machine",
     blueprint_compat = true,
     perishable_compat = false,
     unlocked = true,
