@@ -6,7 +6,7 @@ SMODS.Joker {
     unlocked = true,
     discovered = true,
     atlas = 'ModdedVanilla',
-    rarity = 2, -- Uncommon
+    rarity = 1, -- Common
     cost = 5,
     pos = { x = 4, y = 1 },
 
