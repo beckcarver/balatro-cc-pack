@@ -15,8 +15,9 @@ SMODS.Joker {
     loc_txt = {
         name = "Exoplanet",
         text = {
-            "Chooses a random {C:attention}poker hand{} each round.",
-            "When that hand is played gives {X:mult,C:white}X#1#{} Mult",
+            "Chooses a random {C:attention}poker hand{}",
+            "each hand played. When that",
+            "hand is scored gives {X:mult,C:white}X#1#{} Mult",
             "{C:inactive}(Currently: {C:attention}#2#{C:inactive})"
         }
     },
@@ -30,16 +31,14 @@ SMODS.Joker {
         if context.joker_main and context.scoring_name == card.ability.extra.poker_hand then
             return {
                 xmult = card.ability.extra.xmult,
-                --message = localize{ type = 'variable', key = 'a_xmult', vars = { card.ability.extra.xmult } },
-                --colour = G.C.MULT
             }
         end
 
-        -- Pick a new random hand at end of round
-        if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
+        -- After a hand finishes scoring, pick a new random hand
+        if context.after and context.main_eval and not context.blueprint then
             local _poker_hands = {}
             for handname, _ in pairs(G.GAME.hands) do
-                if SMODS.is_poker_hand_visible(handname) and handname ~= card.ability.extra.poker_hand then
+                if SMODS.is_poker_hand_visible(handname) then
                     _poker_hands[#_poker_hands + 1] = handname
                 end
             end

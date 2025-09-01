@@ -14,7 +14,7 @@ SMODS.Joker {
     loc_txt = {
         name = "The Woker",
         text = {
-            "{C:green}#1#/#2#{} chance at end of",
+            "{C:green}#1# in #2#{} chance at end of",
             "round to turn a random",
             "Joker {C:dark_edition}Polychrome{}",
             "{C:inactive}stinkyinvegas.com{}"

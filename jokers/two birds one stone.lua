@@ -15,7 +15,7 @@ SMODS.Joker {
         text = {
             "Gives {X:mult,C:white}2x{} Mult and 1 {C:tarot}Tarot{}",
             "card when played hand",
-            "is a {C:attention} Two Pair{} and",
+            "is a{C:attention} Two Pair{} and",
             "contains a {C:attention}Stone Card{}",
         }
     },

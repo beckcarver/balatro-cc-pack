@@ -1,67 +1,50 @@
-SMODS.Joker{
-    name = "Venture Capital",
-    key = "bvpp_venture_capital",
-    config = {
-        extra = {
-            payout = 12,
-            penalty = 1,
-            odds = 5  -- 1 in 5 chance
-        }
-    },
+SMODS.Joker {
+    key = 'bvpp_venture_capital',
     loc_txt = {
-        ['name'] = 'Venture Capital',
-        ['text'] = {
-            [1] = '{C:green}1/2{} chance to give {C:money}$#1#{} at end of round,',
-            [2] = 'otherwise lose {C:money}$#2#{}'
+        name = "Venture Capital",
+        text = {
+            "{C:green}#1# in #2# {} chance to gain {C:money}$#3#{}",
+            "otherwise lose {C:red}$#4#{} at",
+            "end of round"
         }
     },
-    pos = {
-        x = 3,
-        y = 3
-    },
-    cost = 6,
-    rarity = 2,
-    blueprint_compat = false,
-    eternal_compat = false,
+    blueprint_compat = true,
+    eternal_compat = true,
     unlocked = true,
     discovered = true,
+    rarity = 2,
     atlas = 'ModdedVanilla',
+    pos = { x = 3, y = 3 }, -- adjust art slot if needed
+    cost = 7,
+    config = {
+        extra = {
+            odds = 2,       -- base denominator (1 in 4 chance)
+            payout = 12,     -- $ on success
+            penalty = 2     -- $ on failure
+        }
+    },
 
     loc_vars = function(self, info_queue, card)
-        return {vars = {card.ability.extra.payout, card.ability.extra.penalty}}
+        -- get scaled odds (respects Oops! All 6s and similar)
+        local n, d = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'bvpp_venture_capital')
+
+        -- keep them stored so calc_dollar_bonus stays in sync
+        card.ability.extra._numerator = n
+        card.ability.extra._denominator = d
+
+        return {
+            vars = { n, d, card.ability.extra.payout, card.ability.extra.penalty }
+        }
     end,
 
-    calculate = function(self, card, context)
-        if context.end_of_round and not context.individual and not context.repetition and not context.blueprint then
-            if pseudorandom('venture_capital'..tostring(card)) < 1 / card.ability.extra.odds then
-                G.E_MANAGER:add_event(Event({
-                    func = function()
-                        card_eval_status_text(card, 'extra', nil, nil, nil, {
-                            message = localize('k_earned_ex'),
-                            colour = G.C.MONEY,
-                            card = card
-                        })
-                        return true
-                    end
-                }))
-                ease_dollars(card.ability.extra.payout)
-                card:juice_up(0.5, 0.5)
-                delay(0.5)
-            else
-                G.E_MANAGER:add_event(Event({
-                    func = function()
-                        card_eval_status_text(card, 'extra', nil, nil, nil, {
-                            message = "-$"..tostring(card.ability.extra.penalty),
-                            colour = G.C.MONEY,
-                            card = card
-                        })
-                        return true
-                    end
-                }))
-                ease_dollars(-card.ability.extra.penalty)
-                card:juice_up(0.5, 0.5)
-                delay(0.5)
-            end
+    calc_dollar_bonus = function(self, card)
+        local n = card.ability.extra._numerator or 1
+        local d = card.ability.extra._denominator or card.ability.extra.odds
+
+        if SMODS.pseudorandom_probability(card, 'bvpp_venture_capital', n, d) then
+            return card.ability.extra.payout
+        else
+            return -card.ability.extra.penalty
         end
     end
 }
