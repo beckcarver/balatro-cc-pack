@@ -1,7 +1,7 @@
 SMODS.Joker {
-    key = 'bvpp_ducasse',
+    key = 'bvpp_golden_harvest',
     loc_txt = {
-        name = "Ducasse",
+        name = "Golden Harvest",
         text = {
             "Played cards give {C:mult}+#1#{}",
             "Mult for {C:attention}#2#{} hands",
@@ -11,11 +11,13 @@ SMODS.Joker {
     discovered = true,
     blueprint_compat = true,
     eternal_compat = false,
-    config = { extra = { mult = 4, hands_left = 7 } },
-    rarity = 1,
+    -- Only appears if Ducasse is extinct (adjust flag name as needed to match your mod's pool_flag style)
+    yes_pool_flag = 'vpp_ducasse_extinct',
+    config = { extra = { mult = 8, hands_left = 50 } },
+    rarity = 1, -- Common
     atlas = 'ModdedVanilla',
-    pos = { x = 1, y = 2 },
-    cost = 4,
+    pos = { x = 2, y = 2 },
+    cost = 6,
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.mult, card.ability.extra.hands_left } }
     end,
@@ -29,6 +31,7 @@ SMODS.Joker {
         -- At the end of a hand (after scoring), decrement hands_left and destroy if needed
         if context.after and not context.blueprint then
             if card.ability.extra.hands_left - 1 <= 0 then
+                G.GAME.pool_flags.vpp_ducasse_extinct = true
                 G.E_MANAGER:add_event(Event({
                     func = function()
                         play_sound('tarot1')
@@ -44,19 +47,18 @@ SMODS.Joker {
                                 G.jokers:remove_card(card)
                                 card:remove()
                                 card = nil
-                                return true
+                                return true;
                             end
                         }))
                         return true
                     end
                 }))
-                G.GAME.pool_flags.vpp_ducasse_extinct = true
             else
                 card.ability.extra.hands_left = card.ability.extra.hands_left - 1
             end
         end
     end,
-    in_pool = function(self, args)
-        return not G.GAME.pool_flags.vpp_ducasse_extinct
+    in_pool = function(self, args) -- equivalent to `yes_pool_flag = 'vremade_gros_michel_extinct'`
+        return G.GAME.pool_flags.vpp_ducasse_extinct
     end
 }
