@@ -1,2 +1,2 @@
 # Balatro Community College Pack
-Balatro Mod with vanilla-like jokers
+Vanilla-like joker pack that adds 24 jokers, credit to Rofflatro and Extra Credit for inspiration & code reference. Follow me @BalatroCC on YouTube!
