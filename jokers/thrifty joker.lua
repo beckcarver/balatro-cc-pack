@@ -12,7 +12,7 @@ SMODS.Joker {
 
     config = { 
         extra = { 
-            enhancements = { "m_gold", "m_mult", "m_bonus", "m_glass", "m_steel", "m_stone" },
+            enhancements = { "m_gold", "m_mult", "m_bonus", "m_glass", "m_steel", "m_stone", "m_lucky" },
             poker_hand = 'High Card'
         } 
     },
