@@ -1,4 +1,4 @@
--- On a Knife's Edge
+-- Commoners Deck
 SMODS.Challenge {
     key = 'commoners',
     rules = {
@@ -7,6 +7,6 @@ SMODS.Challenge {
         },
     },
     jokers = {
-        { id = 'j_riff_raff', eternal = true, edition = 'negative', pinned = false },
+        { id = 'j_riff_raff', edition = 'negative', pinned = false },
     }
 }

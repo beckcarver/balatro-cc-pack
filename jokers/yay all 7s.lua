@@ -35,10 +35,9 @@ SMODS.Joker {
 
                 if SMODS.pseudorandom_probability(card, 'boe bingus', numerator, denominator) then
                     retrigger_count = retrigger_count + 1
-                end
-
-                if SMODS.pseudorandom_probability(card, 'boe bungus', numerator, denominator) then
-                    retrigger_count = retrigger_count + 1
+                    if SMODS.pseudorandom_probability(card, 'boe bungus', numerator, denominator) then
+                        retrigger_count = retrigger_count + 1
+                    end
                 end
 
 

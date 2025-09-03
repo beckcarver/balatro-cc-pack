@@ -12,23 +12,21 @@ SMODS.Joker {
     eternal_compat = true,
     unlocked = true,
     discovered = true,
-    rarity = 2,
+    rarity = 2, -- Uncommon
     atlas = 'ModdedVanilla',
-    pos = { x = 3, y = 3 }, -- adjust art slot if needed
+    pos = { x = 3, y = 3 },
     cost = 7,
     config = {
         extra = {
-            odds = 2,       -- base denominator (1 in 4 chance)
-            payout = 12,     -- $ on success
-            penalty = 2     -- $ on failure
+            odds = 2,
+            payout = 12,
+            penalty = 2
         }
     },
 
     loc_vars = function(self, info_queue, card)
-        -- get scaled odds (respects Oops! All 6s and similar)
         local n, d = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'bccp_venture_capital')
 
-        -- keep them stored so calc_dollar_bonus stays in sync
         card.ability.extra._numerator = n
         card.ability.extra._denominator = d
 
