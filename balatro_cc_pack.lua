@@ -11,8 +11,17 @@ SMODS.Atlas {
 	py = 95
 }
 
--- load all individual cards
+-- load all jokers
 local subdir = "jokers"
+local cards = NFS.getDirectoryItems(SMODS.current_mod.path .. subdir)
+for _, filename in pairs(cards) do
+    if string.sub(filename, string.len(filename) - 3) == '.lua' then
+        assert(SMODS.load_file(subdir .. "/" .. filename))()
+    end
+end
+
+-- load all challenges
+local subdir = "challenges"
 local cards = NFS.getDirectoryItems(SMODS.current_mod.path .. subdir)
 for _, filename in pairs(cards) do
     if string.sub(filename, string.len(filename) - 3) == '.lua' then

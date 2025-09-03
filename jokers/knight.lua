@@ -20,7 +20,7 @@ SMODS.Joker {
             "1st hand played gives {C:mult}+#1#{} mult",
             "2nd hand played gives {X:mult,C:white}x#2#{} multiplier",
             "then resets to first hand",
-            "{C:inactive}Currently on hand: {C:attention}#3#{}"
+            "{C:inactive}(Currently on hand: {C:attention}#3#{}{C:inactive}){}"
         }
     },
 

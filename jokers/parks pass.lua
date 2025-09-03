@@ -17,7 +17,7 @@ SMODS.Joker {
         text = {
             "Gain {C:mult}+1{} for every",
             "unused discard this run",
-            "current total: {C:mult}#2#{} mult"
+            "{C:inactive}(Currently: {C:mult}+#2#{}{C:inactive}){}"
         }
     },
 

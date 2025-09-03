@@ -19,7 +19,7 @@ SMODS.Joker {
             "2nd hand played gives {C:chips}+#2#{} chips",
             "3rd hand played gives {C:chips}+#3#{} chips",
             "then resets to first hand",
-            "{C:inactive}Currently on hand: {C:attention}#4#{}"
+            "{C:inactive}(Currently on hand: {C:attention}#4#{}{C:inactive}){}"
         }
     },
 
