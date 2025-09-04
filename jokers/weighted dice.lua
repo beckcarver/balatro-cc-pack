@@ -7,7 +7,7 @@ SMODS.Joker {
     discovered = true,
     atlas = 'ModdedVanilla',
     rarity = 1, -- Common
-    cost = 3,
+    cost = 4,
     pos = { x = 3, y = 1 },
 
     loc_txt = {

@@ -8,7 +8,7 @@ SMODS.Joker {
     atlas = 'ModdedVanilla',
     pos = { x = 4, y = 0 },
     rarity = 1, -- Common
-    cost = 4,
+    cost = 5,
 
     config = { 
         extra = { 

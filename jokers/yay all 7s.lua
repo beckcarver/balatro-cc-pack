@@ -13,10 +13,10 @@ SMODS.Joker {
     unlocked = true,
     discovered = true,
     config = { extra = { odds = 4 } },
-    rarity = 2,
+    rarity = 2, -- Uncommon
     atlas = 'ModdedVanilla',
-    pos = { x = 4, y = 4 }, -- need art
-    cost = 8,
+    pos = { x = 4, y = 4 },
+    cost = 6,
 
     loc_vars = function(self, info_queue, card)
         card.ability.extra._numerator, card.ability.extra._denominator =
