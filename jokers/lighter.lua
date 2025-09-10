@@ -15,9 +15,9 @@ SMODS.Joker {
     loc_txt = {
         name = "Lighter",
         text = {
-            "Gains {C:chips}+#1#{} permanent chips",
-            "whenever a card is {C:attention}sold{}",
-            "Currently gives {C:chips}+#2#{}"
+            "Gains {C:chips}+#1#{} chips when",
+            "a card is {C:attention}sold{}",
+            "{C:inactive}(Currently gives {C:chips}+#2#{}{C:inactive}){}"
         }
     },
 
