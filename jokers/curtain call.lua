@@ -16,7 +16,7 @@ SMODS.Joker {
         name = "Curtain Call",
         text = {
             "If round is won in",
-            "exactly {C:attention} 3 hands{}, create",
+            "exactly {C:attention}3 hands{}, create",
             "a {C:planet}Venus{} planet card"
         }
     },
