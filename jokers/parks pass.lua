@@ -10,7 +10,7 @@ SMODS.Joker {
     cost = 5,
     pos = { x = 4, y = 1 },
 
-    config = { extra = { mult_per_unused = 1, total_mult = 0 } },
+    config = { extra = { mult_per_unused = 1, mult = 0 } },
 
     loc_txt = {
         name = "Parks Pass",
@@ -24,16 +24,17 @@ SMODS.Joker {
 
     loc_vars = function(self, info_queue, card)
         local unused = G.GAME.unused_discards or 0
-        local total_mult = card.ability.extra.mult_per_unused * unused
-        total_mult = total_mult + G.GAME.current_round.discards_left
-        return { vars = { card.ability.extra.mult_per_unused, total_mult } }
+        local mult = card.ability.extra.mult_per_unused * unused
+        mult = mult + G.GAME.current_round.discards_left
+        return { vars = { card.ability.extra.mult_per_unused, mult } }
     end,
 
     calculate = function(self, card, context)
         if context.joker_main then
             local unused = G.GAME.unused_discards or 0
-            card.ability.extra.total_mult = card.ability.extra.mult_per_unused * unused
-            return { mult = card.ability.extra.total_mult }
+            card.ability.extra.mult = card.ability.extra.mult_per_unused * unused
+            card.ability.extra.mult = card.ability.extra.mult + G.GAME.current_round.discards_left
+            return { mult = card.ability.extra.mult }
         end
     end
 }
