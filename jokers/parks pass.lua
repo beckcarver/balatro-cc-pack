@@ -15,8 +15,9 @@ SMODS.Joker {
     loc_txt = {
         name = "Parks Pass",
         text = {
-            "Gain {C:mult}+1{} for every",
-            "unused discard this run",
+            "This joker gains {C:mult}+1{} Mult",
+            "for every unused", 
+            "discard this {C:attention}run{}",
             "{C:inactive}(Currently: {C:mult}+#2#{}{C:inactive}){}"
         }
     },
@@ -24,6 +25,7 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         local unused = G.GAME.unused_discards or 0
         local total_mult = card.ability.extra.mult_per_unused * unused
+        total_mult = total_mult + G.GAME.current_round.discards_left
         return { vars = { card.ability.extra.mult_per_unused, total_mult } }
     end,
 
