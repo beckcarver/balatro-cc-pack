@@ -16,7 +16,7 @@ SMODS.Joker {
     loc_txt = {
         name = "Triangle Joker",
         text = {
-            "This joker ains {C:mult}+#1#{} Mult",
+            "This joker gains {C:mult}+#1#{} Mult",
             "if discard contains a {C:attention}3{} ",
             "{C:inactive}(Currently: {C:mult}+#2#{}{C:inactive}){}"
         }
