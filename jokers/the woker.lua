@@ -28,7 +28,7 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        if context.end_of_round and not context.blueprint then
+        if context.end_of_round and not context.blueprint and context.cardarea == G.jokers then
             -- Only trigger once per round
             if card.ability.extra._woker_triggered then
                 return
@@ -37,7 +37,10 @@ SMODS.Joker {
             -- check chance to trigger
             if not SMODS.pseudorandom_probability(card, 'the_woker', card.ability.extra._numerator, card.ability.extra._denominator) then
                 card.ability.extra._woker_triggered = true
-                return
+                return {
+                    message = "Missed!",
+                    card = card
+                }
             end
 
             -- gather eligible jokers (exclude self and ones with any edition)
@@ -62,6 +65,8 @@ SMODS.Joker {
                     }
                 end
             end
+
+
 
             -- mark as triggered so it won't run again this round
             card.ability.extra._woker_triggered = true
